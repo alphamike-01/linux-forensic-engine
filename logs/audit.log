@@ -1,0 +1,9 @@
+type=SYSCALL msg=audit(2026-08-15T10:00:00Z): pid=100 ppid=1 uid=1000 exe=/bin/bash
+
+type=SYSCALL msg=audit(2026-08-15T10:00:05Z): pid=101 ppid=100 uid=0 exe=/usr/bin/sudo
+
+type=SYSCALL msg=audit(2026-08-15T10:00:10Z): pid=102 ppid=101 uid=0 exe=/usr/bin/vim
+
+type=SYSCALL msg=audit(2026-08-15T10:00:05Z): pid=101 ppid=100 uid=0 exe=/usr/bin/sudo
+
+type=SYSCALL msg=audit(2026-08-15T10:00:12Z): pid=103 ppid=100 uid=1000 exe=/usr/bin/cat

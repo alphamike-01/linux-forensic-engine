@@ -1,0 +1,35 @@
+[
+    {
+        "timestamp": "2026-08-15T10:00:00Z",
+        "source": "audit",
+        "event_type": "process_start",
+        "details": {
+            "pid": 200,
+            "ppid": 1,
+            "uid": 1000,
+            "exe": "/bin/bash"
+        }
+    },
+    {
+        "timestamp": "2026-08-15T10:00:01Z",
+        "source": "kernel_module",
+        "event_type": "file_access",
+        "details": {
+            "pid": 200,
+            "path": "/etc/passwd",
+            "action": "write",
+            "uid": 1000
+        }
+    },
+    {
+        "timestamp": "2026-08-15T10:00:02Z",
+        "source": "audit",
+        "event_type": "process_start",
+        "details": {
+            "pid": 201,
+            "ppid": 200,
+            "uid": 0,
+            "exe": "/usr/bin/sudo"
+        }
+    }
+]

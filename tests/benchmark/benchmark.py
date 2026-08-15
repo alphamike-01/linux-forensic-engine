@@ -1,0 +1,30 @@
+import time
+
+from ingest.loader import load_logs
+from reconciliation.deduplicator import deduplicate
+from reconciliation.sorter import order
+
+
+def benchmark():
+
+    start = time.perf_counter()
+
+    events = load_logs()
+
+    events = deduplicate(events)
+
+    events = order(events)
+
+    end = time.perf_counter()
+
+    print(f"Events processed: {len(events)}")
+
+    print(
+        f"Execution time: "
+        f"{end - start:.4f} seconds"
+    )
+
+
+if __name__ == "__main__":
+
+    benchmark()

@@ -1,0 +1,28 @@
+from pathlib import Path
+
+from forensic_engine.parsers.audit_parser import AuditParser
+from forensic_engine.parsers.dmesg_parser import DmesgParser
+from forensic_engine.parsers.kernel_parser import KernelParser
+
+
+def load_logs(log_directory="logs"):
+
+    log_directory = Path(log_directory)
+
+    events = []
+
+    parsers = {
+        "audit.log": AuditParser(),
+        "dmesg.log": DmesgParser(),
+        "kernel_module.log": KernelParser()
+    }
+
+    for filename, parser in parsers.items():
+
+        filepath = log_directory / filename
+
+        if filepath.exists():
+
+            events.extend(parser.parse(filepath))
+
+    return events

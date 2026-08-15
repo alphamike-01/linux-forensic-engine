@@ -1,0 +1,14 @@
+[
+    {
+        "source": "audit",
+        "timestamp": "2026-08-15T10:00:01Z",
+        "permission": "644",
+        "pid": 200
+    },
+    {
+        "source": "kernel_module",
+        "timestamp": "2026-08-15T10:00:02Z",
+        "permission": "777",
+        "pid": 100
+    }
+]
